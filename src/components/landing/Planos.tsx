@@ -11,7 +11,9 @@ const solucoes = [
     pergunta: "Precisa apresentar sua empresa por completo?",
     descricao:
       "O Site Institucional é ideal para empresas que precisam de mais espaço para apresentar sua história, serviços, equipe, informações e diferenciais.",
-    indicadoPara: [
+    descricaoMobile:
+      "Ideal pra empresas que precisam de mais espaço pra se apresentar por completo.",
+      indicadoPara: [
       "Sua empresa oferece vários serviços",
       "Precisa apresentar diferentes áreas do negócio",
       "Quer ter páginas específicas para cada serviço",
@@ -30,7 +32,9 @@ const solucoes = [
     pergunta: "Precisa de uma página focada em um objetivo?",
     descricao:
       "A Landing Page é ideal para quem quer apresentar um serviço, divulgar uma oferta ou transformar visitantes em contatos, sem precisar de várias páginas.",
-    indicadoPara: [
+    descricaoMobile:
+      "Ideal pra apresentar um serviço ou oferta e converter visitantes em contatos.",
+      indicadoPara: [
       "Seu negócio possui um serviço ou oferta principal",
       "Você quer direcionar o cliente para o WhatsApp",
       "Precisa de uma página objetiva para divulgação",
@@ -99,10 +103,13 @@ export function Planos() {
                   <div className="flex flex-1 flex-col">
                     <h3 className="text-2xl font-bold text-brand-navy">{solucao.titulo}</h3>
                     <p className="mt-2 text-xl font-semibold text-brand-navy">{solucao.pergunta}</p>
-                    <p className="mt-4 text-brand-navy-soft">{solucao.descricao}</p>
+                    <p className="mt-4 text-brand-navy-soft">
+                      <span className="md:hidden">{solucao.descricaoMobile}</span>
+                      <span className="hidden md:inline">{solucao.descricao}</span>
+                    </p>
 
                     <div className="mt-6">
-                      <p className="font-bold text-brand-navy">É para você se:</p>
+                      <p className="font-bold text-brand-navy">Faz sentido para o seu negócio se:</p>
                       <ul className="mt-3 flex flex-col gap-3">
                         {solucao.indicadoPara.map((item) => (
                           <li key={item} className="flex gap-3 text-brand-navy-soft">
@@ -117,11 +124,13 @@ export function Planos() {
                     </div>
                   </div>
 
-                  <div className="mt-6 rounded-2xl border border-brand-sky-soft bg-brand-surface p-6 lg:min-h-[200px]">
-                    <p className="font-bold text-brand-navy">O que você recebe</p>
-                    <p className="mt-2 text-brand-navy-soft">{solucao.entrega}</p>
-                    <p className="mt-3 font-semibold text-brand-cta">{solucao.tagline}</p>
-                  </div>
+                  <span className="hidden md:inline">  
+                    <div className="mt-6 rounded-2xl border border-brand-sky-soft bg-brand-surface p-6 lg:min-h-[200px]">
+                      <p className="font-bold text-brand-navy">O que você recebe</p>
+                      <p className="mt-2 text-brand-navy-soft">{solucao.entrega}</p>
+                      <p className="mt-3 font-semibold text-brand-cta">{solucao.tagline}</p>
+                    </div>
+                  </span>
 
                   <a
                     href={WHATSAPP_URL}
