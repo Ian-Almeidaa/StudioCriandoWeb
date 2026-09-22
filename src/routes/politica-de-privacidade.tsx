@@ -3,7 +3,7 @@ import { ArrowLeft, Mail, MessageCircle } from "lucide-react";
 
 import { Footer } from "@/components/landing/Footer";
 import { Header } from "@/components/landing/Header";
-import { EMAIL, WHATSAPP_URL, WHATSAPP_URL_2 } from "@/lib/site";
+import { EMAIL, WHATSAPP_URL_GENERIC} from "@/lib/site";
 
 const title = "Política de Privacidade | StudioCriandoWeb";
 const description =
@@ -221,24 +221,14 @@ function PoliticaDePrivacidadePage() {
                   {EMAIL}
                 </a>
                 <a
-                  href={WHATSAPP_URL}
+                  href={WHATSAPP_URL_GENERIC}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Falar sobre privacidade pelo primeiro WhatsApp"
                   className="inline-flex items-center gap-3 font-semibold text-brand-cta transition-colors hover:text-brand-cta-hover"
                 >
                   <MessageCircle aria-hidden="true" className="h-5 w-5" />
-                  WhatsApp: 65 9 9231-9214
-                </a>
-                <a
-                  href={WHATSAPP_URL_2}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Falar sobre privacidade pelo segundo WhatsApp"
-                  className="inline-flex items-center gap-3 font-semibold text-brand-cta transition-colors hover:text-brand-cta-hover"
-                >
-                  <MessageCircle aria-hidden="true" className="h-5 w-5" />
-                  WhatsApp: 65 9 9208-3661
+                  WhatsApp: 65 9 9638-9833
                 </a>
               </div>
             </section>
