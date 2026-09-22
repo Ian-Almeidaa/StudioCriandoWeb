@@ -19,7 +19,7 @@ type ResultadoQuiz = {
 
 type Opcao<T> = { label: string; value: T };
 
-const WHATSAPP_NUMBER = "6592083661";
+const WHATSAPP_NUMBER = "65996389833";
 
 const perguntaSite: { id: "site"; pergunta: string; opcoes: Opcao<SituacaoSite>[] } = {
   id: "site",
@@ -233,6 +233,8 @@ export function Quiz() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href={resultado ? linkWhatsApp(mensagemWhatsApp(resultado)) : "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-xl bg-brand-cta px-6 py-3 font-bold text-white transition-colors duration-200"
                 >
                   Falar no WhatsApp

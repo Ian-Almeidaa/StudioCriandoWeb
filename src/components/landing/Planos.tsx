@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
-import { WHATSAPP_URL } from "@/lib/site";
+import { WHATSAPP_URL_GENERIC, WHATSAPP_URL_LANDING, WHATSAPP_URL_SITE_INSTITUCIONAL } from "@/lib/site";
 
 const solucoes = [
   {
@@ -133,7 +133,11 @@ export function Planos() {
                   </span>
 
                   <a
-                    href={WHATSAPP_URL}
+                    href={
+                      solucao.servico === "Landing Page"
+                      ? WHATSAPP_URL_LANDING
+                      : WHATSAPP_URL_SITE_INSTITUCIONAL
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Solicitar ${solucao.servico} pelo WhatsApp`}
@@ -161,7 +165,7 @@ export function Planos() {
               necessidade e indicamos a estrutura mais adequada.
             </p>
             <a
-              href={WHATSAPP_URL}
+              href={WHATSAPP_URL_GENERIC}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Falar com um especialista pelo WhatsApp"

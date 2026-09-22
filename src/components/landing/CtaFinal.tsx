@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/motion/Reveal";
-import { WHATSAPP_URL } from "@/lib/site";
+import { WHATSAPP_URL_ORCAMENTO } from "@/lib/site";
 
 export function CtaFinal() {
   return (
@@ -17,7 +17,7 @@ export function CtaFinal() {
           longo e sem compromisso.
         </p>
         <a
-          href={WHATSAPP_URL}
+          href={WHATSAPP_URL_ORCAMENTO}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-white px-8 py-4 text-lg font-bold text-brand-cta shadow-brand-card transition-[transform,background-color] duration-300 hover:-translate-y-1 hover:bg-brand-sky-soft sm:w-auto"

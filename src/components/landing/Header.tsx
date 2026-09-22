@@ -5,7 +5,7 @@ import * as React from "react";
 
 import logoAsset from "@/assets/logo-studiocriandoweb.png";
 import { Sheet, SheetContent, SheetClose, SheetTrigger } from "@/components/ui/sheet";
-import { BRAND, WHATSAPP_URL } from "@/lib/site";
+import { BRAND, WHATSAPP_URL_GENERIC } from "@/lib/site";
 
 const links = [
   { href: "/quem-somos", label: "Quem somos" },
@@ -65,7 +65,7 @@ export function Header() {
         </nav>
 
         <a
-          href={WHATSAPP_URL}
+          href={WHATSAPP_URL_GENERIC}
           target="_blank"
           rel="noopener noreferrer"
           className="hidden rounded-full bg-brand-cta px-5 py-2 text-sm font-bold text-white shadow-brand-soft transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-brand-cta-hover sm:inline-flex"
@@ -118,7 +118,7 @@ export function Header() {
             </nav>
             <SheetClose asChild>
               <a
-                href={WHATSAPP_URL}
+                href={WHATSAPP_URL_GENERIC}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-brand-cta px-5 py-3 text-center text-base font-bold text-white shadow-brand-soft transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-brand-cta-hover"

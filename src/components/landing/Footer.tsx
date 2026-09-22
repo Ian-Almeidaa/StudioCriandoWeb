@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 
 import logoAsset from "@/assets/logo-studiocriandoweb.png";
-import { BRAND, EMAIL, INSTAGRAM_URL, WHATSAPP_URL, WHATSAPP_URL_2 } from "@/lib/site";
+import { BRAND, EMAIL, INSTAGRAM_URL, WHATSAPP_URL_GENERIC } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -61,21 +61,11 @@ export function Footer() {
               <li>
                 <a
                   className="text-brand-navy-soft hover:text-brand-cta"
-                  href={WHATSAPP_URL}
+                  href={WHATSAPP_URL_GENERIC}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  WhatsApp: 65 9 9231-9214
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-brand-navy-soft hover:text-brand-cta"
-                  href={WHATSAPP_URL_2}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  WhatsApp: 65 9 9208-3661
+                  WhatsApp: (65) 99638-9833
                 </a>
               </li>
               <li>

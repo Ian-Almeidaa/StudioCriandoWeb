@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { motion, useReducedMotion } from "motion/react";
 
 import heroMockup from "@/assets/hero-mockup.png";
-import { WHATSAPP_URL } from "@/lib/site";
+import { WHATSAPP_URL_GENERIC } from "@/lib/site";
 
 const palavras = ["SEU NEGÓCIO MERECE MAIS QUE UM PERFIL NO INSTAGRAM"];
 
@@ -74,7 +74,7 @@ export function Hero() {
           >
             <div className="flex flex-col gap-4 sm:flex-row">
               <a
-                href={WHATSAPP_URL}
+                href={WHATSAPP_URL_GENERIC}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-cta px-8 py-4 text-lg font-bold text-white shadow-brand-card transition-all duration-300 hover:-translate-y-1 hover:bg-brand-cta-hover sm:w-auto"

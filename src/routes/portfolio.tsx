@@ -6,7 +6,7 @@ import { Footer } from "@/components/landing/Footer";
 import { SitePreview } from "@/components/portfolio/SitePreview";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { projetos } from "@/lib/portfolio";
-import { WHATSAPP_URL } from "@/lib/site";
+import { WHATSAPP_URL_PORTFOLIO } from "@/lib/site";
 
 const title = "Portfólio de sites | StudioCriandoWeb";
 const description =
@@ -104,7 +104,7 @@ function PortfolioPage() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href={WHATSAPP_URL}
+                href={WHATSAPP_URL_PORTFOLIO}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex w-full items-center justify-center rounded-2xl bg-white px-8 py-4 text-lg font-bold text-brand-cta transition-transform duration-300 hover:-translate-y-1 sm:w-auto"
