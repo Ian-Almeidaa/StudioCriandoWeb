@@ -72,8 +72,9 @@ function PortfolioPage() {
               {projetos.map((p) => (
                 <RevealItem
                   key={p.slug}
+                  id={p.slug}
                   as="article"
-                  className="hover-lift group overflow-hidden rounded-3xl border border-brand-sky-soft bg-card shadow-brand-soft"
+                  className="hover-lift group scroll-mt-24 overflow-hidden rounded-3xl border border-brand-sky-soft bg-card shadow-brand-soft"
                 >
                   <SitePreview
                     previewImg={p.previewImg}
