@@ -40,21 +40,28 @@ export function Cases() {
               as="article"
               className="hover-card group overflow-hidden rounded-3xl border border-brand-sky-soft bg-card shadow-brand-soft"
             >
-              <div className="overflow-hidden">
-                <img
-                  src={item.img}
-                  alt={item.alt}
-                  loading="lazy"
-                  width={800}
-                  height={600}
-                  className="h-40 w-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-brand-navy">{item.segmento}</h3>
-                <p className="mt-2 text-sm font-semibold text-brand-cta">{item.cliente}</p>
-                <p className="mt-4 text-sm text-brand-navy-soft">{item.resultado}</p>
-              </div>
+              <Link
+                to="/portfolio"
+                hash={item.slug}
+                aria-label={`Ver modelo de ${item.segmento.toLowerCase()} no portfólio`}
+                className="block h-full rounded-3xl focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-cta"
+              >
+                <div className="overflow-hidden">
+                  <img
+                    src={item.img}
+                    alt={item.alt}
+                    loading="lazy"
+                    width={800}
+                    height={600}
+                    className="h-40 w-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-brand-navy">{item.segmento}</h3>
+                  <p className="mt-2 text-sm font-semibold text-brand-cta">{item.cliente}</p>
+                  <p className="mt-4 text-sm text-brand-navy-soft">{item.resultado}</p>
+                </div>
+              </Link>
             </RevealItem>
           ))}
         </RevealGroup>
