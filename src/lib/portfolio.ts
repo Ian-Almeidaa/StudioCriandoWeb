@@ -1,12 +1,12 @@
 import caseOdonto from "@/assets/img-odonto.png";
 import caseEstetica from "@/assets/img-espaco-estetica.png";
-import casePetshop from "@/assets/img-pet-shop.png";
+import casePetshop from "@/assets/img-p3ts.jpg";
 import caseFisio from "@/assets/img-fisio.png";
 import caseVet from "@/assets/img-clinica-vet.png";
 import caseElite from "@/assets/img-elite.jpg";
 import previewEstetica from "@/assets/preview-espaco-estetica.png";
 import previewOdonto from "@/assets/case-odonto-preview-sharpened.jpg";
-import previewPetshop from "@/assets/preview-pet-shop.png";
+import previewPetshop from "@/assets/preview-p3ts.jpg";
 import previewFisio from "@/assets/preview-fisio.png";
 import previewVet from "@/assets/Preview-clinica-vet.png";
 import previewElite from "@/assets/preview-elite.jpg";
@@ -53,15 +53,17 @@ export const projetos: Projeto[] = [
     prazo: "7 dias",
   },
   {
-    slug: "pet-shop",
+    slug: "p3ts-pet-shop",
     img: casePetshop,
     previewImg: previewPetshop,
-    alt: "Interior de pet shop com um cachorro no balcão de atendimento",
-    segmento: "Pet shop",
-    cliente: "Uma estrutura para apresentar serviços e facilitar o contato.",
-    resultado: "Organiza banho, tosa e outros serviços para levar o cliente ao WhatsApp.",
-    entregas: ["Copy de serviços", "Seção de planos mensais", "Mapa e horários"],
-    prazo: "5 dias",
+    demoUrl: "https://p3ts-studiocriandoweb.pages.dev/",
+    alt: "Site P3TS Pet Store, com três pets, identidade verde e laranja e catálogo de produtos",
+    segmento: "P3TS — Pet shop",
+    cliente: "Uma experiência acolhedora para quem cuida dos pets.",
+    resultado:
+      "Projeto demonstrativo com catálogo de produtos, apresentação de serviços e simulação de agendamento.",
+    entregas: ["Landing page responsiva", "Catálogo de produtos", "Simulação de agendamento"],
+    prazo: "Projeto demonstrativo",
   },
   {
     slug: "clinica-de-fisioterapia",

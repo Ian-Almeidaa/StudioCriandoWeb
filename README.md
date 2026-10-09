@@ -42,3 +42,9 @@ npm run dev
 O projeto Elite substitui o modelo personalizado na página inicial e no portfólio completo. A demonstração foi adaptada de [Edudsprado/Elite](https://github.com/Edudsprado/Elite), preservando o visual e o vídeo de abertura. O formulário apenas simula uma cotação, sem enviar ou armazenar pedidos. As imagens `img-elite.jpg` e `preview-elite.jpg` são capturas da própria demonstração.
 
 Os botões do portfólio abrem o [site completo do Elite](https://elite-studiocriandoweb.pages.dev/) em uma nova aba. Ele é hospedado separadamente no Cloudflare Pages, com publicação automática a partir da branch `main` de `Edudsprado/Elite`. A versão interna em `/demo/elite` permanece disponível.
+
+## Demonstração P3TS
+
+O P3TS substitui o template anterior de petshop na página inicial e no portfólio completo. Os botões abrem a [demonstração completa](https://p3ts-studiocriandoweb.pages.dev/) em uma nova aba, seguindo o padrão do Elite. As imagens `img-p3ts.jpg` e `preview-p3ts.jpg` são capturas da versão publicada.
+
+A demonstração é hospedada separadamente no Cloudflare Pages, com publicação automática a partir da branch `main` de [Edudsprado/P3TS](https://github.com/Edudsprado/P3TS). Carrinho, finalização de compra, agendamento e inscrição na newsletter são simulações de interface; não processam compras nem enviam os dados preenchidos.
