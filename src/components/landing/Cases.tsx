@@ -54,6 +54,16 @@ export function Cases() {
                 <h3 className="text-lg font-bold text-brand-navy">{item.segmento}</h3>
                 <p className="mt-2 text-sm font-semibold text-brand-cta">{item.cliente}</p>
                 <p className="mt-4 text-sm text-brand-navy-soft">{item.resultado}</p>
+                {item.demoUrl && (
+                  <a
+                    href={item.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-cta hover:underline"
+                  >
+                    Explorar demonstração <span aria-hidden="true">↗</span>
+                  </a>
+                )}
               </div>
             </RevealItem>
           ))}
