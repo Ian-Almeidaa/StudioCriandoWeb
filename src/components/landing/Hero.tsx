@@ -100,120 +100,112 @@ export function Hero() {
             </div>
 
             {/* Diferenciais */}
-            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-brand-navy-soft">
-              <span>✓ Estratégia</span>
-              <span>✓ Copy</span>
-              <span>✓ Design</span>
-              <span>✓ Publicação</span>
-            </div>
+
           </motion.div>
         </div>
 
         {/* LADO DIREITO - SOMENTE DESKTOP */}
         {/* LADO DIREITO - SOMENTE DESKTOP */}
-<div className="relative hidden lg:block">
-  {/* Glow atrás dos cards */}
-  <div
-    aria-hidden="true"
-    className="pointer-events-none absolute -inset-12 rounded-full bg-brand-sky/20 blur-3xl"
-  />
+        <div className="relative hidden lg:block">
+          {/* Glow atrás dos cards */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-12 rounded-full bg-brand-sky/20 blur-3xl"
+          />
 
-  <div className="relative flex w-full flex-col gap-4">
-    {/* Card principal */}
-    <motion.div
-      initial={
-        reduce
-          ? { opacity: 0 }
-          : { opacity: 0, x: 30, y: 10 }
-      }
-      animate={{ opacity: 1, x: 0, y: 0 }}
-      transition={{
-        delay: 0.35,
-        duration: 0.7,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className="w-full rounded-3xl border border-brand-sky-soft bg-white/70 p-6 shadow-brand-card backdrop-blur"
-    >
-      <p className="text-sm font-bold tracking-wide text-brand-cta">
-        PRESENÇA DIGITAL
-      </p>
+          <div className="relative flex w-full flex-col gap-4">
+            {/* Card principal */}
+            <motion.div
+              initial={
+                reduce
+                  ? { opacity: 0 }
+                  : { opacity: 0, x: 30, y: 10 }
+              }
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{
+                delay: 0.35,
+                duration: 0.7,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="w-full rounded-3xl border border-brand-sky-soft bg-white/70 p-6 shadow-brand-card backdrop-blur"
+            >
+              <p className="text-sm font-bold tracking-wide text-brand-cta">
+                PRESENÇA DIGITAL
+              </p>
 
-      <h2 className="mt-2 text-2xl font-extrabold leading-tight text-brand-navy">
-        Um site que transmite profissionalismo
-      </h2>
+              <h2 className="mt-2 text-2xl font-extrabold leading-tight text-brand-navy">
+                Um site que valoriza o seu negócio
+              </h2>
 
-      <p className="mt-3 text-sm leading-relaxed text-brand-navy-soft">
-        Mostre seu negócio de forma profissional e gere confiança antes
-        mesmo do primeiro contato.
-      </p>
-    </motion.div>
+              <p className="mt-3 text-sm leading-relaxed text-brand-navy-soft">
+                Apresente sua empresa de forma profissional, transmita confiança e mostre ao cliente por que ele deve escolher você.
+              </p>
+            </motion.div>
 
-    {/* Card responsivo */}
-    <motion.div
-      initial={
-        reduce
-          ? { opacity: 0 }
-          : { opacity: 0, x: 30 }
-      }
-      animate={{ opacity: 1, x: 0 }}
-      transition={{
-        delay: 0.5,
-        duration: 0.7,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className="w-full rounded-2xl border border-brand-sky-soft bg-white/70 p-5 shadow-brand-card backdrop-blur"
-    >
-      <div className="flex items-center gap-4">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-sky-soft font-bold text-brand-cta">
-          ✓
-        </span>
+            {/* Card responsivo */}
+            <motion.div
+              initial={
+                reduce
+                  ? { opacity: 0 }
+                  : { opacity: 0, x: 30 }
+              }
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.5,
+                duration: 0.7,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="w-full rounded-2xl border border-brand-sky-soft bg-white/70 p-5 shadow-brand-card backdrop-blur"
+            >
+              <div className="flex items-center gap-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-sky-soft font-bold text-brand-cta">
+                  ✓
+                </span>
 
-        <div>
-          <p className="font-bold text-brand-navy">
-            Design responsivo
-          </p>
+                <div>
+                  <p className="font-bold text-brand-navy">
+                    Experiência em qualquer tela
+                  </p>
 
-          <p className="mt-1 text-sm leading-relaxed text-brand-navy-soft">
-            Seu site funciona perfeitamente no celular, tablet e
-            computador.
-          </p>
+                  <p className="mt-1 text-sm leading-relaxed text-brand-navy-soft">
+                    Seu site se adapta ao celular, tablet e computador para que seu cliente tenha uma boa experiência onde estiver.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Card processo */}
+            <motion.div
+              initial={
+                reduce
+                  ? { opacity: 0 }
+                  : { opacity: 0, x: 30 }
+              }
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.65,
+                duration: 0.7,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="w-full rounded-2xl border border-brand-sky-soft bg-white/70 p-5 shadow-brand-card backdrop-blur"
+            >
+              <div className="flex items-center gap-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-sky-soft font-bold text-brand-cta">
+                  ✓
+                </span>
+
+                <div>
+                  <p className="font-bold text-brand-navy">
+                    Pensado para o seu negócio
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-brand-navy-soft">
+                    Da estratégia à publicação, cada página é construída de acordo com sua empresa, seu público e seus objetivos.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
-      </div>
-    </motion.div>
-
-    {/* Card processo */}
-    <motion.div
-      initial={
-        reduce
-          ? { opacity: 0 }
-          : { opacity: 0, x: 30 }
-      }
-      animate={{ opacity: 1, x: 0 }}
-      transition={{
-        delay: 0.65,
-        duration: 0.7,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className="w-full rounded-2xl border border-brand-sky-soft bg-white/70 p-5 shadow-brand-card backdrop-blur"
-    >
-      <div className="flex items-center gap-4">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-sky-soft font-bold text-brand-cta">
-          ✓
-        </span>
-
-        <div>
-          <p className="font-bold text-brand-navy">
-            Do planejamento à publicação
-          </p>
-
-          <p className="mt-1 text-sm leading-relaxed text-brand-navy-soft">
-            Estratégia, copy, design e publicação em um único processo.
-          </p>
-        </div>
-      </div>
-    </motion.div>
-  </div>
-</div>
       </div>
     </section>
   );

@@ -30,8 +30,9 @@ export function Cases() {
             >
               <Link
                 to="/portfolio"
-                aria-label={`Ver portfólio: ${item.segmento}`}
-                className="block h-full rounded-3xl focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-cta"
+                hash={item.slug}
+                aria-label={`Ver modelo de ${item.segmento.toLowerCase()} no portfólio`}
+                className="block h-full rounded-3xl focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-cta"
               >
                 <div className="overflow-hidden">
                   <img

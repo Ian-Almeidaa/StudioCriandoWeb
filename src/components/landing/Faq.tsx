@@ -13,11 +13,11 @@ const perguntas = [
   },
   {
     q: "O que acontece depois da entrega?",
-    a: "A página fica sua, publicada e funcionando. Os planos landing page e site institucional incluem período de ajustes; depois disso é possível contratar manutenção avulsa quando precisar.",
+    a: "A página é sua, publicada e funcionando. Os planos landing page e site institucional incluem período de ajustes; depois disso é possível contratar um pacote para manutenções contínuas sempre que precisar.",
   },
   {
     q: "Como funciona o pagamento?",
-    a: "50% na aprovação do orçamento e 50% na entrega. Somente pix.",
+    a: "50% na aprovação do orçamento e 50% na entrega.",
   },
   {
     q: "Já tenho um site antigo. Dá para substituir?",

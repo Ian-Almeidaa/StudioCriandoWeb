@@ -55,10 +55,12 @@ export function RevealGroup({
 
 export function RevealItem({
   children,
+  id,
   className,
   as = "div",
 }: {
   children: ReactNode;
+  id?: string;
   className?: string;
   as?: "div" | "article" | "li";
 }) {
@@ -66,6 +68,7 @@ export function RevealItem({
   const MotionTag = motion[as];
   return (
     <MotionTag
+      id={id}
       className={className}
       variants={{
         hidden: reduce ? { opacity: 0 } : { opacity: 0, y: 24 },
