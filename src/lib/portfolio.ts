@@ -3,18 +3,19 @@ import caseEstetica from "@/assets/img-espaco-estetica.png";
 import casePetshop from "@/assets/img-pet-shop.png";
 import caseFisio from "@/assets/img-fisio.png";
 import caseVet from "@/assets/img-clinica-vet.png";
-import caseCustom from "@/assets/img-personalizado.jpg";
+import caseElite from "@/assets/img-elite.jpg";
 import previewEstetica from "@/assets/preview-espaco-estetica.png";
 import previewOdonto from "@/assets/case-odonto-preview-sharpened.jpg";
 import previewPetshop from "@/assets/preview-pet-shop.png";
 import previewFisio from "@/assets/preview-fisio.png";
 import previewVet from "@/assets/Preview-clinica-vet.png";
-import previewCustom from "@/assets/preview-personalizado.png";
+import previewElite from "@/assets/preview-elite.jpg";
 
 export type Projeto = {
   slug: string;
   img: string;
   previewImg?: string;
+  demoUrl?: string;
   alt: string;
   segmento: string;
   cliente: string;
@@ -87,15 +88,20 @@ export const projetos: Projeto[] = [
     prazo: "6 dias",
   },
   {
-    slug: "escrito-personalizado",
-    img: caseCustom,
-    previewImg: previewCustom,
-    alt: "Retrato de profissional em um ambiente de trabalho com plantas",
-    segmento: "Projeto personalizado",
-    cliente: "Quando o seu negócio precisa de uma estrutura única.",
+    slug: "elite-aviacao-executiva",
+    img: caseElite,
+    previewImg: previewElite,
+    demoUrl: "/demo/elite",
+    alt: "Site Elite de aviação executiva, com jato particular e apresentação da frota",
+    segmento: "Elite — Aviação executiva",
+    cliente: "Uma experiência digital à altura de uma marca premium.",
     resultado:
-      "Projeto desenvolvido sob medida para sua identidade, conteúdo e necessidades específicas.",
-    entregas: ["Briefing aprofundado", "Copy 100% personalizada", "Design exclusivo"],
-    prazo: "Sob consulta",
+      "Projeto demonstrativo com vídeo de abertura, catálogo de aeronaves e simulação de cotação de voos.",
+    entregas: [
+      "Landing page responsiva",
+      "Apresentação interativa da frota",
+      "Simulação de cotação",
+    ],
+    prazo: "Projeto demonstrativo",
   },
 ];
