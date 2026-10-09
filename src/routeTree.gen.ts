@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as QuemSomosRouteImport } from './routes/quem-somos'
+import { Route as DemoEliteRouteImport } from './routes/demo.elite'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +35,25 @@ const QuemSomosRoute = QuemSomosRouteImport.update({
   path: '/quem-somos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DemoEliteRoute = DemoEliteRouteImport.update({
+  id: '/demo/elite',
+  path: '/demo/elite',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/portfolio': typeof PortfolioRoute
   '/quem-somos': typeof QuemSomosRoute
+  '/demo/elite': typeof DemoEliteRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/portfolio': typeof PortfolioRoute
   '/quem-somos': typeof QuemSomosRoute
+  '/demo/elite': typeof DemoEliteRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,14 +61,30 @@ export interface FileRoutesById {
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/portfolio': typeof PortfolioRoute
   '/quem-somos': typeof QuemSomosRoute
+  '/demo/elite': typeof DemoEliteRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/politica-de-privacidade' | '/portfolio' | '/quem-somos'
+  fullPaths:
+    | '/'
+    | '/politica-de-privacidade'
+    | '/portfolio'
+    | '/quem-somos'
+    | '/demo/elite'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/politica-de-privacidade' | '/portfolio' | '/quem-somos'
+  to:
+    | '/'
+    | '/politica-de-privacidade'
+    | '/portfolio'
+    | '/quem-somos'
+    | '/demo/elite'
   id:
-    '__root__' | '/' | '/politica-de-privacidade' | '/portfolio' | '/quem-somos'
+    | '__root__'
+    | '/'
+    | '/politica-de-privacidade'
+    | '/portfolio'
+    | '/quem-somos'
+    | '/demo/elite'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -68,6 +92,7 @@ export interface RootRouteChildren {
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   PortfolioRoute: typeof PortfolioRoute
   QuemSomosRoute: typeof QuemSomosRoute
+  DemoEliteRoute: typeof DemoEliteRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -100,6 +125,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuemSomosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/demo/elite': {
+      id: '/demo/elite'
+      path: '/demo/elite'
+      fullPath: '/demo/elite'
+      preLoaderRoute: typeof DemoEliteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -108,6 +140,7 @@ const rootRouteChildren: RootRouteChildren = {
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   PortfolioRoute: PortfolioRoute,
   QuemSomosRoute: QuemSomosRoute,
+  DemoEliteRoute: DemoEliteRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
