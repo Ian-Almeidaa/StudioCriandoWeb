@@ -78,7 +78,11 @@ function PortfolioPage() {
                   <SitePreview
                     previewImg={p.previewImg}
                     alt={p.alt}
-                    url={`studiocriandoweb.com/${p.slug}`}
+                    url={
+                      p.demoUrl
+                        ? `studiocriandoweb.com${p.demoUrl}`
+                        : `studiocriandoweb.com/${p.slug}`
+                    }
                   />
                   <div className="p-8">
                     <h2 className="font-display text-2xl font-bold text-brand-navy">
@@ -86,6 +90,16 @@ function PortfolioPage() {
                     </h2>
                     <p className="mt-2 text-sm font-semibold text-brand-cta">{p.cliente}</p>
                     <p className="mt-4 text-brand-navy-soft">{p.resultado}</p>
+                    {p.demoUrl && (
+                      <a
+                        href={p.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-6 inline-flex items-center gap-2 rounded-full border border-brand-cta/40 px-5 py-2 text-sm font-bold text-brand-cta transition-colors hover:bg-brand-sky-soft"
+                      >
+                        Explorar demonstração <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
                   </div>
                 </RevealItem>
               ))}
