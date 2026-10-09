@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { SitePreview } from "@/components/portfolio/SitePreview";
+import { SiteDetailsLink } from "@/components/portfolio/SiteDetailsLink";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { projetos } from "@/lib/portfolio";
 import { WHATSAPP_URL_PORTFOLIO } from "@/lib/site";
@@ -73,7 +74,7 @@ function PortfolioPage() {
                 <RevealItem
                   key={p.slug}
                   as="article"
-                  className="hover-lift group overflow-hidden rounded-3xl border border-brand-sky-soft bg-card shadow-brand-soft"
+                  className="hover-lift group flex flex-col overflow-hidden rounded-3xl border border-brand-sky-soft bg-card shadow-brand-soft"
                 >
                   <SitePreview
                     previewImg={p.previewImg}
@@ -84,21 +85,16 @@ function PortfolioPage() {
                         : `studiocriandoweb.com/${p.slug}`
                     }
                   />
-                  <div className="p-8">
+                  <div className="flex flex-1 flex-col p-8">
                     <h2 className="font-display text-2xl font-bold text-brand-navy">
                       {p.segmento}
                     </h2>
                     <p className="mt-2 text-sm font-semibold text-brand-cta">{p.cliente}</p>
                     <p className="mt-4 text-brand-navy-soft">{p.resultado}</p>
                     {p.demoUrl && (
-                      <a
-                        href={p.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-6 inline-flex items-center gap-2 rounded-full border border-brand-cta/40 px-5 py-2 text-sm font-bold text-brand-cta transition-colors hover:bg-brand-sky-soft"
-                      >
-                        Explorar demonstração <span aria-hidden="true">↗</span>
-                      </a>
+                      <div className="mt-auto pt-6">
+                        <SiteDetailsLink url={p.demoUrl} siteName={p.segmento} />
+                      </div>
                     )}
                   </div>
                 </RevealItem>

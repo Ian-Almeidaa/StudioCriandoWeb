@@ -18,18 +18,6 @@ export function Cases() {
                 internet.
               </p>
             </div>
-            <Link
-              to="/portfolio"
-              className="group inline-flex items-center gap-2 rounded-full border border-brand-cta/40 px-5 py-2 text-sm font-bold text-brand-cta transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-brand-sky-soft"
-            >
-              Ver portfólio completo
-              <span
-                aria-hidden="true"
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </Link>
           </div>
         </Reveal>
 
@@ -40,31 +28,27 @@ export function Cases() {
               as="article"
               className="hover-card group overflow-hidden rounded-3xl border border-brand-sky-soft bg-card shadow-brand-soft"
             >
-              <div className="overflow-hidden">
-                <img
-                  src={item.img}
-                  alt={item.alt}
-                  loading="lazy"
-                  width={800}
-                  height={600}
-                  className="h-40 w-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-brand-navy">{item.segmento}</h3>
-                <p className="mt-2 text-sm font-semibold text-brand-cta">{item.cliente}</p>
-                <p className="mt-4 text-sm text-brand-navy-soft">{item.resultado}</p>
-                {item.demoUrl && (
-                  <a
-                    href={item.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-cta hover:underline"
-                  >
-                    Explorar demonstração <span aria-hidden="true">↗</span>
-                  </a>
-                )}
-              </div>
+              <Link
+                to="/portfolio"
+                aria-label={`Ver portfólio: ${item.segmento}`}
+                className="block h-full rounded-3xl focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-cta"
+              >
+                <div className="overflow-hidden">
+                  <img
+                    src={item.img}
+                    alt={item.alt}
+                    loading="lazy"
+                    width={800}
+                    height={600}
+                    className="h-40 w-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-brand-navy">{item.segmento}</h3>
+                  <p className="mt-2 text-sm font-semibold text-brand-cta">{item.cliente}</p>
+                  <p className="mt-4 text-sm text-brand-navy-soft">{item.resultado}</p>
+                </div>
+              </Link>
             </RevealItem>
           ))}
         </RevealGroup>

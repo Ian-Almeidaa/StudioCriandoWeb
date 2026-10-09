@@ -27,6 +27,7 @@ export type Projeto = {
 export const projetos: Projeto[] = [
   {
     slug: "clinica-odontologica",
+    demoUrl: "https://modelo-odontologico.studiocriandoweb.workers.dev/",
     img: caseOdonto,
     previewImg: previewOdonto,
     alt: "Recepção de clínica odontológica em tons de azul e branco",
@@ -43,6 +44,7 @@ export const projetos: Projeto[] = [
   },
   {
     slug: "espaco-de-estetica",
+    demoUrl: "https://modelo-espaco-estetica.studiocriandoweb.workers.dev/",
     img: caseEstetica,
     previewImg: previewEstetica,
     alt: "Sala de atendimento de espaço de estética com decoração clara",
@@ -67,6 +69,7 @@ export const projetos: Projeto[] = [
   },
   {
     slug: "clinica-de-fisioterapia",
+    demoUrl: "https://modelo-fisioterapia.studiocriandoweb.workers.dev/",
     img: caseFisio,
     previewImg: previewFisio,
     alt: "Sala de clínica de fisioterapia com equipamentos de reabilitação",
@@ -79,6 +82,7 @@ export const projetos: Projeto[] = [
   },
   {
     slug: "clinica-veterinaria",
+    demoUrl: "https://modelo-clinica-veterinario.studiocriandoweb.workers.dev/",
     img: caseVet,
     previewImg: previewVet,
     alt: "Recepção de clínica veterinária em tons de azul e branco",
