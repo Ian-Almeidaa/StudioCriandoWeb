@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { SitePreview } from "@/components/portfolio/SitePreview";
+import { SiteDetailsLink } from "@/components/portfolio/SiteDetailsLink";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { projetos } from "@/lib/portfolio";
 import { WHATSAPP_URL_PORTFOLIO } from "@/lib/site";
@@ -79,14 +80,23 @@ function PortfolioPage() {
                   <SitePreview
                     previewImg={p.previewImg}
                     alt={p.alt}
-                    url={`studiocriandoweb.com/${p.slug}`}
+                    url={
+                      p.demoUrl
+                        ? p.demoUrl.replace(/^https?:\/\//, "")
+                        : `studiocriandoweb.com/${p.slug}`
+                    }
                   />
-                  <div className="p-8">
+                  <div className="flex flex-1 flex-col p-8">
                     <h2 className="font-display text-2xl font-bold text-brand-navy">
                       {p.segmento}
                     </h2>
                     <p className="mt-2 text-sm font-semibold text-brand-cta">{p.cliente}</p>
                     <p className="mt-4 text-brand-navy-soft">{p.resultado}</p>
+                    {p.demoUrl && (
+                      <div className="mt-auto pt-6">
+                        <SiteDetailsLink url={p.demoUrl} siteName={p.segmento} />
+                      </div>
+                    )}
                   </div>
                 </RevealItem>
               ))}

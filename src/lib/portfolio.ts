@@ -1,20 +1,21 @@
 import caseOdonto from "@/assets/img-odonto.png";
 import caseEstetica from "@/assets/img-espaco-estetica.png";
-import casePetshop from "@/assets/img-pet-shop.png";
+import casePetshop from "@/assets/img-p3ts.jpg";
 import caseFisio from "@/assets/img-fisio.png";
 import caseVet from "@/assets/img-clinica-vet.png";
-import caseCustom from "@/assets/img-personalizado.jpg";
+import caseElite from "@/assets/img-elite.jpg";
 import previewEstetica from "@/assets/preview-espaco-estetica.png";
 import previewOdonto from "@/assets/case-odonto-preview-sharpened.jpg";
-import previewPetshop from "@/assets/preview-pet-shop.png";
+import previewPetshop from "@/assets/preview-p3ts.jpg";
 import previewFisio from "@/assets/preview-fisio.png";
 import previewVet from "@/assets/Preview-clinica-vet.png";
-import previewCustom from "@/assets/preview-personalizado.png";
+import previewElite from "@/assets/preview-elite.jpg";
 
 export type Projeto = {
   slug: string;
   img: string;
   previewImg?: string;
+  demoUrl?: string;
   alt: string;
   segmento: string;
   cliente: string;
@@ -26,6 +27,7 @@ export type Projeto = {
 export const projetos: Projeto[] = [
   {
     slug: "clinica-odontologica",
+    demoUrl: "https://modelo-odontologico.studiocriandoweb.workers.dev/",
     img: caseOdonto,
     previewImg: previewOdonto,
     alt: "Recepção de clínica odontológica em tons de azul e branco",
@@ -42,6 +44,7 @@ export const projetos: Projeto[] = [
   },
   {
     slug: "espaco-de-estetica",
+    demoUrl: "https://modelo-espaco-estetica.studiocriandoweb.workers.dev/",
     img: caseEstetica,
     previewImg: previewEstetica,
     alt: "Sala de atendimento de espaço de estética com decoração clara",
@@ -52,18 +55,21 @@ export const projetos: Projeto[] = [
     prazo: "7 dias",
   },
   {
-    slug: "pet-shop",
+    slug: "p3ts-pet-shop",
     img: casePetshop,
     previewImg: previewPetshop,
-    alt: "Interior de pet shop com um cachorro no balcão de atendimento",
-    segmento: "Pet shop",
-    cliente: "Uma estrutura para apresentar serviços e facilitar o contato.",
-    resultado: "Organiza banho, tosa e outros serviços para levar o cliente ao WhatsApp.",
-    entregas: ["Copy de serviços", "Seção de planos mensais", "Mapa e horários"],
-    prazo: "5 dias",
+    demoUrl: "https://p3ts-studiocriandoweb.pages.dev/",
+    alt: "Site P3TS Pet Store, com três pets, identidade verde e laranja e catálogo de produtos",
+    segmento: "P3TS — Pet shop",
+    cliente: "Uma experiência acolhedora para quem cuida dos pets.",
+    resultado:
+      "Projeto demonstrativo com catálogo de produtos, apresentação de serviços e simulação de agendamento.",
+    entregas: ["Landing page responsiva", "Catálogo de produtos", "Simulação de agendamento"],
+    prazo: "Projeto demonstrativo",
   },
   {
     slug: "clinica-de-fisioterapia",
+    demoUrl: "https://modelo-fisioterapia.studiocriandoweb.workers.dev/",
     img: caseFisio,
     previewImg: previewFisio,
     alt: "Sala de clínica de fisioterapia com equipamentos de reabilitação",
@@ -76,6 +82,7 @@ export const projetos: Projeto[] = [
   },
   {
     slug: "clinica-veterinaria",
+    demoUrl: "https://modelo-clinica-veterinario.studiocriandoweb.workers.dev/",
     img: caseVet,
     previewImg: previewVet,
     alt: "Recepção de clínica veterinária em tons de azul e branco",
@@ -87,15 +94,20 @@ export const projetos: Projeto[] = [
     prazo: "6 dias",
   },
   {
-    slug: "escrito-personalizado",
-    img: caseCustom,
-    previewImg: previewCustom,
-    alt: "Retrato de profissional em um ambiente de trabalho com plantas",
-    segmento: "Projeto personalizado",
-    cliente: "Quando o seu negócio precisa de uma estrutura única.",
+    slug: "elite-aviacao-executiva",
+    img: caseElite,
+    previewImg: previewElite,
+    demoUrl: "https://elite-studiocriandoweb.pages.dev/",
+    alt: "Site Elite de aviação executiva, com jato particular e apresentação da frota",
+    segmento: "Elite — Aviação executiva",
+    cliente: "Uma experiência digital à altura de uma marca premium.",
     resultado:
-      "Projeto desenvolvido sob medida para sua identidade, conteúdo e necessidades específicas.",
-    entregas: ["Briefing aprofundado", "Copy 100% personalizada", "Design exclusivo"],
-    prazo: "Sob consulta",
+      "Projeto demonstrativo com vídeo de abertura, catálogo de aeronaves e simulação de cotação de voos.",
+    entregas: [
+      "Landing page responsiva",
+      "Apresentação interativa da frota",
+      "Simulação de cotação",
+    ],
+    prazo: "Projeto demonstrativo",
   },
 ];

@@ -18,18 +18,6 @@ export function Cases() {
                 internet.
               </p>
             </div>
-            <Link
-              to="/portfolio"
-              className="group inline-flex items-center gap-2 rounded-full border border-brand-cta/40 px-5 py-2 text-sm font-bold text-brand-cta transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-brand-sky-soft"
-            >
-              Ver portfólio completo
-              <span
-                aria-hidden="true"
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </Link>
           </div>
         </Reveal>
 
