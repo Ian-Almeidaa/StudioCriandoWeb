@@ -91,7 +91,7 @@ export const projetos: Projeto[] = [
     slug: "elite-aviacao-executiva",
     img: caseElite,
     previewImg: previewElite,
-    demoUrl: "/demo/elite",
+    demoUrl: "https://elite-studiocriandoweb.pages.dev/",
     alt: "Site Elite de aviação executiva, com jato particular e apresentação da frota",
     segmento: "Elite — Aviação executiva",
     cliente: "Uma experiência digital à altura de uma marca premium.",

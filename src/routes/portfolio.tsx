@@ -80,7 +80,7 @@ function PortfolioPage() {
                     alt={p.alt}
                     url={
                       p.demoUrl
-                        ? `studiocriandoweb.com${p.demoUrl}`
+                        ? p.demoUrl.replace(/^https?:\/\//, "")
                         : `studiocriandoweb.com/${p.slug}`
                     }
                   />

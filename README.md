@@ -40,3 +40,5 @@ npm run dev
 ## Demonstração Elite
 
 O projeto Elite substitui o modelo personalizado na página inicial e no portfólio completo. A demonstração foi adaptada de [Edudsprado/Elite](https://github.com/Edudsprado/Elite), preservando o visual e o vídeo de abertura. O formulário apenas simula uma cotação, sem enviar ou armazenar pedidos. As imagens `img-elite.jpg` e `preview-elite.jpg` são capturas da própria demonstração.
+
+Os botões do portfólio abrem o [site completo do Elite](https://elite-studiocriandoweb.pages.dev/) em uma nova aba. Ele é hospedado separadamente no Cloudflare Pages, com publicação automática a partir da branch `main` de `Edudsprado/Elite`. A versão interna em `/demo/elite` permanece disponível.
